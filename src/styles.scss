@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: yellow;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 10px;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(0deg, rgba(205,240,255,1) 0%, rgba(85,183,255,1) 78%, rgba(32,171,255,1) 100%);
+}
