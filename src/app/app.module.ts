@@ -12,6 +12,7 @@ import { EntryComponent } from './entries-container/entry/entry.component';
 import { ReviewComponent } from './entries-container/entry/review/review.component';
 import { MediaComponent } from './entries-container/entry/media/media.component';
 import { SafePipe } from './pipes/safe.pipe';
+import { NavItemComponent } from './nav/nav-item/nav-item.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,8 @@ import { SafePipe } from './pipes/safe.pipe';
     EntryComponent,
     ReviewComponent,
     MediaComponent,
-    SafePipe
+    SafePipe,
+    NavItemComponent
   ],
   imports: [
     BrowserModule,

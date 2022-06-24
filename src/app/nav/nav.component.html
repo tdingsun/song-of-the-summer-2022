@@ -1,5 +1,3 @@
 <div>
-    <ol>
-        <li *ngFor="let song of songList">{{song}}</li>
-    </ol>
+    <app-nav-item *ngFor="let key of keys" [key]="key"></app-nav-item>
 </div>

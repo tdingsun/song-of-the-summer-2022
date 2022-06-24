@@ -1,5 +1,5 @@
-<div id=entry>
-    <p>{{songName}} by {{artistName}}</p>
+<div class="entry" [id]="anchorId">
+    <div id="entry-header"><span id="song-name">{{songName}}</span> by <span id="artist-name">{{artistName}}</span></div>
     <div id="entry-body">
         <app-media [link]="link"></app-media>
         <div id="reviews-container">

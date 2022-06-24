@@ -11,6 +11,7 @@ export class EntryComponent implements OnInit {
   songName: string;
   artistName: string;
   link: string;
+  anchorId: string;
   constructor() { }
 
   ngOnInit(): void {
@@ -18,6 +19,7 @@ export class EntryComponent implements OnInit {
     this.songName = songObject.song;
     this.artistName = songObject.artist;
     this.link = this.reviews[0]['link'];
+    this.anchorId = (this.songName + '-' + this.artistName).replace(' ', '-');
     console.log(this.reviews);
   }
 
