@@ -4,8 +4,6 @@ if (!process.env.NETLIFY) {
   require('dotenv').config();
 }
 
-console.log(process.env);
-
 // required env vars
 if (!process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL)
   throw new Error('no GOOGLE_SERVICE_ACCOUNT_EMAIL env var set');
@@ -27,7 +25,7 @@ export const handler: Handler = async (event, context) => {
   });
   await doc.loadInfo();
   const sheet = doc.sheetsByIndex[0];
-  console.log('accessing ', sheet.title, 'it has ', sheet.rowCount, ' rows');
+  // console.log('accessing ', sheet.title, 'it has ', sheet.rowCount, ' rows');
  
   const path = event.path.replace(/\.netlify\/functions\/[^/]+/, '');
   const segments = path.split('/').filter((e) => e);

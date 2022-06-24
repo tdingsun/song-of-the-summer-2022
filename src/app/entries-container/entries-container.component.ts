@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import { SpreadsheetService } from '../services/spreadsheet.service';
 
 const attributesMapping = {
     email: "Email Address",
@@ -26,9 +27,13 @@ export class EntriesContainerComponent implements OnInit {
  
   responses$: Observable<any>
   constructor(
+    private spreadsheetService: SpreadsheetService
   ) { }
 
   ngOnInit(): void {
+    this.spreadsheetService.getRows().subscribe((rows) => {
+      console.log(rows);
+    })
   }
 
 }
