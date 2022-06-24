@@ -19,11 +19,8 @@ const attributesMapping = {
   styleUrls: ['./entries-container.component.scss']
 })
 export class EntriesContainerComponent implements OnInit {
-  songList = [
-    "song one",
-    "song two"
-  ]
-
+  rows;
+  keys;
  
   responses$: Observable<any>
   constructor(
@@ -31,8 +28,9 @@ export class EntriesContainerComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.spreadsheetService.getRows().subscribe((rows) => {
-      console.log(rows);
+    this.spreadsheetService.getEntriesBySong().subscribe((rows) => {
+      this.rows = rows
+      this.keys = Object.keys(rows);
     })
   }
 

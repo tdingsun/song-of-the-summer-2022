@@ -1,5 +1,4 @@
 #entry {
-    background-color: white;
     color: black;
     padding: 10px;
     margin-bottom: 10px;
@@ -15,6 +14,6 @@ p {
     
 }
 
-#media {
-    margin-right: 10px;
+#reviews-container {
+    display: flex;
 }

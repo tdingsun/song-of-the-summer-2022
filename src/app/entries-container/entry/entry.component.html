@@ -1,14 +1,9 @@
 <div id=entry>
-    <p>{{song}} entry works!</p>
+    <p>{{songName}} by {{artistName}}</p>
     <div id="entry-body">
-        <div id="media">
-            <iframe src="https://www.youtube.com/embed/3TsrJ9kPU3Q" frameborder="0" allowfullscreen></iframe>        </div>
-        <div id="people-container">
-            <div class="person" *ngFor="let person of personList">
-                <p>{{person.name}}</p>
-                <p>{{person.location}}</p>
-                <p>{{person.description}}</p>
-            </div>
+        <app-media [link]="link"></app-media>
+        <div id="reviews-container">
+            <app-review *ngFor="let review of reviews" [review]="review.description" [name]="review.name" [location]="review.location"></app-review>
         </div>
     </div>
 </div>

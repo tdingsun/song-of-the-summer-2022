@@ -9,6 +9,9 @@ import { LensFlareComponent } from './lens-flare/lens-flare.component';
 import { NavComponent } from './nav/nav.component';
 import { EntriesContainerComponent } from './entries-container/entries-container.component';
 import { EntryComponent } from './entries-container/entry/entry.component';
+import { ReviewComponent } from './entries-container/entry/review/review.component';
+import { MediaComponent } from './entries-container/entry/media/media.component';
+import { SafePipe } from './pipes/safe.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +19,10 @@ import { EntryComponent } from './entries-container/entry/entry.component';
     LensFlareComponent,
     NavComponent,
     EntriesContainerComponent,
-    EntryComponent
+    EntryComponent,
+    ReviewComponent,
+    MediaComponent,
+    SafePipe
   ],
   imports: [
     BrowserModule,

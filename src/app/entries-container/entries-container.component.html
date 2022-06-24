@@ -1,2 +1,3 @@
-<p>entries container</p>
-<app-entry *ngFor="let song of songList" [song]="song"></app-entry>
+<div id="container">
+    <app-entry *ngFor="let key of keys" [key]="key" [reviews]="rows[key]"></app-entry>
+</div>
