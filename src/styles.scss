@@ -17,6 +17,22 @@ body, html {
 body {
     width: 100vw;
     height: 100vh;
+    // background-color: vars.$bg-color;
     background-color: vars.$bg-color;
+
     // background: linear-gradient(0deg, rgba(205,240,255,1) 0%, rgba(85,183,255,0.5) 78%, rgba(32,171,255,0.2) 100%);
+}
+
+a {
+    text-transform: uppercase;
+    font-size: vars.$small-font-size;
+    text-decoration: none;
+    color: unset;
+    cursor: pointer;
+    &:hover {
+        font-weight: bold;
+    }
+    &:visited {
+        color: unset
+    }
 }

@@ -17,12 +17,10 @@ export class LensFlareComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     this.context = this.canvas.nativeElement.getContext('2d') as CanvasRenderingContext2D;
-    this.context.fillStyle = 'red';
-    this.context.fillRect(0, 0, 5, 5);
     this.canvas.nativeElement.width = window.innerWidth;
     this.canvas.nativeElement.height = window.innerHeight;
     this.flare = new Flare(this.canvas.nativeElement, this.context);
-    this.flare.update({x: this.canvas.nativeElement.width/5, y: this.canvas.nativeElement.height/5})
+    this.flare.update({x: this.canvas.nativeElement.width/2, y: this.canvas.nativeElement.height/2})
   }
 
 

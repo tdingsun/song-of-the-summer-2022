@@ -1,0 +1,15 @@
+#overlay {
+    width: 50vw;
+    height: 50vh;
+    opacity: 0.5;
+    mix-blend-mode: multiply;
+    background-image: url('./../assets/forest.gif');
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+@media only screen and (max-width: 540px) {
+    app-nav {
+        display: none;
+    }
+}

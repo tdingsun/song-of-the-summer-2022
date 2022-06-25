@@ -16,3 +16,17 @@
 .container::-webkit-scrollbar {
     display: none;
   }
+
+#footer {
+    font-size: vars.$small-font-size;
+    min-height:100px;
+    padding: 40px;
+    box-sizing: border-box;
+    background-image: url(./../../assets/forest.gif);
+    // background-color: vars.$fg-color;
+    // color: vars.$bg-color;  
+    & p {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
