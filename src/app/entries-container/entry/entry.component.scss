@@ -1,5 +1,10 @@
+@use './../../../mixins/vars';
+
 .entry {
-    padding: 0px 10px;
+    padding: 0px vars.$pad;
+    box-shadow: vars.$box-shadow-u;
+    background-color: inherit;
+   
 }
 
 p {
@@ -9,25 +14,84 @@ p {
 
 #entry-body {
     display: flex; 
+    min-height: 190px;
 }
 
 #entry-header {
-   font-size: 1rem;
-   border-top: 1px solid black; 
-   padding: 5px 0;
+   border-bottom: vars.$border-width vars.$border-style vars.$border-color; 
+   padding: vars.$pad/2 0;
+   margin: 0 30px;
+}
+
+.by {
+    font-size: vars.$small-font-size;
+    text-transform: uppercase;
 }
 
 #song-name, #artist-name {
-    font-size: 1.5rem;
+    font-size: vars.$large-font-size;
+    letter-spacing: vars.$tight-tracking;
 }
 
 #reviews-container {
     display: flex;
     flex-wrap: wrap;
-    & > * {
-        max-width: 250px;
-        flex-grow: 1;
-        flex-shrink: 1;
+    @media only screen and (min-width: 1201px) {
+        & > * { //widest layout: rows of 4
+            width: calc((100vw - 180px) / 4);
+            &:nth-child(4n+2) {
+                margin-right: 150px;
+            }
+        }
+        // &.sparseLayout {
+        //     & > * {
+        //         width: calc((100vw - 180px) / 2);
+        //         &:nth-child(1) {
+        //             margin-right: 160px;
+        //         }
+        //         &:nth-child(4n+2) {
+        //             margin-right: unset;
+        //         }
+        //     }
+        // }
+    }
+    @media only screen and (max-width: 1200px) { //second widest layout: rows of 2
+        & > * {
+            width: calc((100vw - 180px) / 2);
+            &:nth-child(4n+2) {
+                margin-right: unset;
+            }
+            &:nth-child(2n+1) {
+                margin-right: 160px;
+            }
+        }
+    }
+    @media only screen and (max-width: 700px) { // rows of one with media next to text
+        & > * {
+            max-width: 500px;
+            width: calc(100vw - 350px);
+            min-width: 250px;
+            flex-grow: 0;
+        }
     }
 
 }
+
+@media only screen and (max-width: 540px) { // rows of one with media on top of text
+    #entry-body {
+        display: block;
+    }
+    #reviews-container {
+        & > * {
+            width: 100vw;
+            &:nth-child(4n+2) {
+                margin: unset;
+            }
+            &:nth-child(2n+1) {
+                margin: unset;
+            }
+        } 
+    }
+    
+}
+

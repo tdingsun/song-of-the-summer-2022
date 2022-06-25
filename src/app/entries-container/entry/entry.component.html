@@ -1,9 +1,11 @@
 <div class="entry" [id]="anchorId">
-    <div id="entry-header"><span id="song-name">{{songName}}</span> by <span id="artist-name">{{artistName}}</span></div>
+    <div id="entry-header"><span id="song-name">{{songName}}</span> <span class="by"> by </span> <span id="artist-name">{{artistName}}</span></div>
     <div id="entry-body">
         <app-media [link]="link"></app-media>
-        <div id="reviews-container">
+        <div id="reviews-container" [ngClass]="{'sparseLayout': useSparseLayout}">
             <app-review *ngFor="let review of reviews" [review]="review.description" [name]="review.name" [location]="review.location"></app-review>
         </div>
+       
+
     </div>
 </div>

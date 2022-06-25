@@ -1,3 +1,45 @@
+@use "./../../mixins/vars";
+
+:host {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
 canvas {
     background-color: transparent;
+}
+
+.fold {
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+#center {
+    width: 50vw;
+    // border-right: 0.5px dotted grey;
+    box-shadow: vars.$box-shadow-r;
+}
+
+#left {
+    width: calc(50vw - 75px);
+    box-shadow: vars.$box-shadow-r-2;
+}
+
+#right {
+    width: calc(50vw + 75px);
+    box-shadow: vars.$box-shadow-r-2;
+}
+
+#far-left {
+    width: calc(25vw - 30px);
+    box-shadow: vars.$box-shadow-r-2;
+}
+
+#far-right {
+    width: calc(75vw + 30px);
+    box-shadow: vars.$box-shadow-r-2;
 }

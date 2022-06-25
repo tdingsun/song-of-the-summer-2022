@@ -1,3 +1,12 @@
-<div>
-    <iframe [src]="embedSrc | safe:'resourceUrl'" frameborder="0" allowfullscreen></iframe>
+<div class="container">
+    <div class="youtube-player" [id]="YTKey">
+        <div (click)="doIFrame()">
+            <img [src]="previewImgSrc">
+            <!-- <div class="play-icon">▶&#xFE0E;</div> -->
+        </div>
+
+    </div>
+
+    <!-- <iframe [src]="embedSrc | safe:'resourceUrl'" frameborder="0" allowfullscreen></iframe> -->
+
 </div>     

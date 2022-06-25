@@ -1,10 +1,12 @@
+@use './../../../mixins/vars';
+
 a {
-    font-size: 0.83rem;
+    text-transform: uppercase;
+    font-size: vars.$small-font-size;
     text-decoration: none;
     color: unset;
     cursor: pointer;
     &:hover {
-        font-size: 1rem;
         font-weight: bold;
     }
     &:visited {

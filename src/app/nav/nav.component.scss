@@ -1,8 +1,9 @@
+@use './../../mixins/vars';
+
 div {
     width: fit-content;
     position: fixed;
-    padding-right: 10px;
-    top: 10px;
-    right: 10px;
+    top: -1px;
+    right: 3px;
     text-align: right;
 }

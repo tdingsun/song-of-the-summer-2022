@@ -1,16 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+@use 'mixins/vars';
+
+html {
+    --scroll-behavior: smooth;
+    scroll-behavior: smooth;
+  }
+
 body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-    color: black;
+    color: vars.$fg-color;
     box-sizing: border-box;
 }
 
+
 body {
-    padding: 10px;
     width: 100vw;
     height: 100vh;
-    background-color: white;
-    // background: linear-gradient(0deg, rgba(205,240,255,1) 0%, rgba(85,183,255,1) 78%, rgba(32,171,255,1) 100%);
+    background-color: vars.$bg-color;
+    // background: linear-gradient(0deg, rgba(205,240,255,1) 0%, rgba(85,183,255,0.5) 78%, rgba(32,171,255,0.2) 100%);
 }

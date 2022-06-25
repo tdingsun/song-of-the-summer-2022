@@ -1,0 +1,23 @@
+$fg-color: #344f1e;
+$bg-color: gainsboro;
+$accent-color: navajowhite;
+
+$box-shadow-color-r: rgba($fg-color,0.2);
+$box-shadow-color-r-2: rgba($fg-color,0.1);
+$box-shadow-color-u: rgba($fg-color,0.2);
+$tiny-font-size: 0.75rem;
+$small-font-size: 0.875rem;
+$reg-font-size: 1rem;
+$large-font-size: 1.25rem;
+$tight-tracking: -0.3px;
+$less-tight-tracking: -0.1px;
+
+$pad: 10px;
+
+$border-width: 0.5px;
+$border-style: dashed;
+$border-color: $fg-color;
+
+$box-shadow-r: 5px 0px 50px 0px $box-shadow-color-r;
+$box-shadow-r-2: 1px 0px 10px 0px $box-shadow-color-r-2;
+$box-shadow-u: 0px -7px 10px -10px $box-shadow-color-u;

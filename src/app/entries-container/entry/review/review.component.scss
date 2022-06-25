@@ -1,19 +1,33 @@
-#container {
-    padding: 0px 10px;
-    border-left: 1px dotted black; 
+@use './../../../../mixins/vars';
 
+#container {
+    padding: 10px;
+    display: flex;
 }
 
 #header {
-    font-size: 0.83rem;
+    font-size: 0.875rem;
+    margin-bottom: 0;
 }
 
 #name, #location {
     font-size: 1rem;
-    font-weight: bold;
-    letter-spacing: -0.3px;
+    letter-spacing: vars.$tight-tracking;
+}
+
+.from, .says {
+    text-transform: uppercase;
+    font-size: vars.$tiny-font-size
 }
 
 #review {
     font-family: Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: vars.$less-tight-tracking;
+}
+
+#bullet::after {
+    font-family: arial;
+    font-size: vars.$large-font-size;
+    content: "♪";
+    padding-right: vars.$pad;
 }

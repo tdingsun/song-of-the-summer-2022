@@ -12,6 +12,7 @@ export class EntryComponent implements OnInit {
   artistName: string;
   link: string;
   anchorId: string;
+  useSparseLayout: boolean;
   constructor() { }
 
   ngOnInit(): void {
@@ -20,7 +21,9 @@ export class EntryComponent implements OnInit {
     this.artistName = songObject.artist;
     this.link = this.reviews[0]['link'];
     this.anchorId = (this.songName + '-' + this.artistName).replace(' ', '-');
-    console.log(this.reviews);
+    if(this.reviews.length <= 2) {
+      this.useSparseLayout = true;
+    }
   }
 
 }

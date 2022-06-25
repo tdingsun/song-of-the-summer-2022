@@ -1,4 +1,18 @@
-:host {
-    font-size: 14px;
+@use './../../mixins/vars';
+div {
+    font-size: vars.$small-font-size;
     text-align: center;
+    position: fixed;
+    width: 100vw;
+    a {
+        text-decoration: none;
+        color: unset;
+        &:hover {
+            font-weight: bold;
+        }
+        &:visited {
+            color: unset;
+        }
+    }
 }
+
