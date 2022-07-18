@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-
+import { headers } from '../../../services/spreadsheet.model'
 @Component({
   selector: 'app-review',
   templateUrl: './review.component.html',
@@ -7,13 +7,20 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ReviewComponent implements OnInit {
   @Input() review
-  @Input() name
-  @Input() location
+
+  name = '';
+  location = '';
+  description = '';
+
 
 
   constructor() { }
 
   ngOnInit(): void {
+    this.name = this.review[headers.NAME];
+    this.location = this.review[headers.LOCATION];
+    this.description = this.review[headers.DESCRIPTION];
+
   }
 
 }

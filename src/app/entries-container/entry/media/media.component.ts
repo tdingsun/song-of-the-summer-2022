@@ -8,7 +8,8 @@ import { Component, Input, OnInit } from '@angular/core';
 export class MediaComponent implements OnInit {
   @Input() link;
   YTKey: string;
-  isYoutube: boolean;
+  isYoutube: boolean = false;
+  isSoundcloud: boolean = false;
   //TODO: move to consts file
   YTEmbedPrefix: string = 'https://www.youtube.com/embed/'
   YTPreviewImgPrefix: string = 'http://i.ytimg.com/vi/'
@@ -24,11 +25,17 @@ export class MediaComponent implements OnInit {
       this.embedSrc = this.YTEmbedPrefix + ytKey;
       this.previewImgSrc = this.YTPreviewImgPrefix + ytKey + this.YTPreviewImgSuffix;
       console.log(this.embedSrc);
+    } else if (this.checkIsSoundcloud(this.link)){
+      this.embedSrc = this.link;
     }
   }
 
   private checkIsYoutube(link: string): boolean {
     return this.isYoutube = link.includes('youtube.com');
+  }
+
+  private checkIsSoundcloud(link: string): boolean {
+    return this.isSoundcloud = link.includes('soundcloud.com');
   }
 
   private extractYoutubeVideoKey(link: string): string {

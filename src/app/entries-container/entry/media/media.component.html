@@ -1,10 +1,12 @@
 <div class="container">
-    <div class="youtube-player" [id]="YTKey">
+    <div *ngIf="isYoutube" class="youtube-player" [id]="YTKey">
         <div (click)="doIFrame()">
             <img [src]="previewImgSrc">
             <!-- <div class="play-icon">▶&#xFE0E;</div> -->
         </div>
-
+    </div>
+    <div *ngIf="isSoundcloud" class="soundcloud-player">
+        <iframe [src]="embedSrc | safe:'resourceUrl'" frameborder="0" allowfullscreen></iframe>
     </div>
 
     <!-- <iframe [src]="embedSrc | safe:'resourceUrl'" frameborder="0" allowfullscreen></iframe> -->

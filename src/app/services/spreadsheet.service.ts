@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+
+import { headers } from './spreadsheet.model';
 @Injectable({
   providedIn: 'root'
 })
@@ -25,7 +27,7 @@ export class SpreadsheetService {
       map(rows => {
         let rowsBySong = {}
         for(let row of rows) {
-          let key = JSON.stringify({song: row['song'], artist: row['artist']})
+          let key = JSON.stringify({song: row[headers.SONG], artist: row[headers.ARTIST]})
           rowsBySong[key] ?  rowsBySong[key].push(row) : rowsBySong[key] = [row]
         }
         return rowsBySong

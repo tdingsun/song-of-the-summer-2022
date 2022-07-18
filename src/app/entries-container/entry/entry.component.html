@@ -3,7 +3,7 @@
     <div id="entry-body">
         <app-media [link]="link"></app-media>
         <div id="reviews-container" [ngClass]="{'sparseLayout': useSparseLayout}">
-            <app-review *ngFor="let review of reviews" [review]="review.description" [name]="review.name" [location]="review.location"></app-review>
+            <app-review *ngFor="let review of reviews" [review]="review"></app-review>
         </div>
        
 

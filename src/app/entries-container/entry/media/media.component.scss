@@ -30,6 +30,14 @@ iframe {
     }
 }
 
+.soundcloud-player {
+    filter: grayscale(100);
+    -webkit-filter: grayscale(100);
+    mix-blend-mode: screen;
+
+}
+
+
 .play-icon {
     position: absolute;
     left: 50px;
