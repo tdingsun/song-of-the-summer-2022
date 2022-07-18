@@ -5,6 +5,7 @@ div {
     position: fixed;
     width: 100vw;
     top: 0;
+    word-break: break-word;
 }
 
 @media only screen and (max-width: 540px) {
